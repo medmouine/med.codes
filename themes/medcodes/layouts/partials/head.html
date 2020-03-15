@@ -13,6 +13,7 @@
     <link type="text/css" rel="stylesheet" href="{{ "css/poole.css" | absURL}}">
     <link type="text/css" rel="stylesheet" href="{{ "css/syntax.css" | absURL}}">
     <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="shortcut icon" type="image/jpg" href="{{ .Site.Params.favicon }}"/>
     <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
     {{ $styles := resources.Get "sass/core.scss" | toCSS | fingerprint }}
