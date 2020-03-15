@@ -1,56 +1,65 @@
-<section class="section container posts">
-  <p class="title section-title is-size-4">
-    recent posts
-  </p>
-  <ul>
-      {{ $posts := (where .Site.RegularPages "Type" "posts") }}
-      {{ range $posts }}
-    <a href="{{ .Permalink }}">
-      <li class="card is-inline-flex-tablet is-flex-fullhd is-flex-widescreen-only post-container read-more-hover-container">
-          {{if isset .Params "thumbnail"}}
-        <figure class="image is-fullwidth read-more-hover is-hidden-tablet">
-          <img{{ with .Params.thumbnail }} class="post-thumbnail" src="{{ . }}"{{ end }}>
-          <figcaption>
-            <h3>read more</h3>
-          </figcaption>
-        </figure>
-        <figure class="image is-fullwidth read-more-hover media-left thumbnail-container-none-mobile is-hidden-mobile">
-          <img{{ with .Params.thumbnail }} class="post-thumbnail" src="{{ . }}"{{ end }}>
-          <figcaption>
-            <h3>read more</h3>
-          </figcaption>
-        </figure>
-          {{ else }}
-             <figure class="image is-fullwidth read-more-hover is-hidden-tablet">
-              <img class="post-thumbnail" src="https://cdn.glitch.com/c4e65900-d574-4a30-ab84-cd913b7fa895%2Fbongo-cat.gif?1537302652732">
-              <figcaption>
-                <h3>read more</h3>
-              </figcaption>
-            </figure>
-            <figure class="image is-fullwidth read-more-hover media-left thumbnail-container-none-mobile is-hidden-mobile">
-              <img class="post-thumbnail" src="https://cdn.glitch.com/c4e65900-d574-4a30-ab84-cd913b7fa895%2Fbongo-cat.gif?1537302652732">
-              <figcaption>
-                <h3>read more</h3>
-              </figcaption>
-            </figure>
-          {{ end }}
-        <div class="media-content card-content">
-          <div class="content">
-            <span class="is-size-7 is-normal">{{ .Date.Format "January 2, 2006" }}</span>
-            <p class="title is-size-3-fullhd is-size-4-desktop is-size-5-tablet">{{ .Params.title }}</p>
-            <span class="subtitle is-size-5-fullhd is-size-6-desktop post-description">
+{{ $posts := (where .Site.RegularPages "Type" "posts") }}
+{{ if ( eq ( len $posts ) 0 ) }}
+    <p style="margin-top: 50px" class="title is-size-6 has-text-centered">
+      There are no posts yet :(
+    </p>
+{{ else }}
+  <section class="section container posts">
+
+    <p class="title section-title is-size-4">
+      recent posts
+    </p>
+    <ul>
+        {{ range $posts }}
+          <a href="{{ .Permalink }}">
+            <li class="card is-inline-flex-tablet is-flex-fullhd is-flex-widescreen-only post-container read-more-hover-container">
+                {{if isset .Params "thumbnail"}}
+                  <figure class="image is-fullwidth read-more-hover is-hidden-tablet">
+                    <img{{ with .Params.thumbnail }} class="post-thumbnail" src="{{ . }}"{{ end }}>
+                    <figcaption>
+                      <h3>read more</h3>
+                    </figcaption>
+                  </figure>
+                  <figure class="image is-fullwidth read-more-hover media-left thumbnail-container-none-mobile is-hidden-mobile">
+                    <img{{ with .Params.thumbnail }} class="post-thumbnail" src="{{ . }}"{{ end }}>
+                    <figcaption>
+                      <h3>read more</h3>
+                    </figcaption>
+                  </figure>
+                {{ else }}
+                  <figure class="image is-fullwidth read-more-hover is-hidden-tablet">
+                    <img class="post-thumbnail"
+                         src="https://cdn.glitch.com/c4e65900-d574-4a30-ab84-cd913b7fa895%2Fbongo-cat.gif?1537302652732">
+                    <figcaption>
+                      <h3>read more</h3>
+                    </figcaption>
+                  </figure>
+                  <figure class="image is-fullwidth read-more-hover media-left thumbnail-container-none-mobile is-hidden-mobile">
+                    <img class="post-thumbnail"
+                         src="https://cdn.glitch.com/c4e65900-d574-4a30-ab84-cd913b7fa895%2Fbongo-cat.gif?1537302652732">
+                    <figcaption>
+                      <h3>read more</h3>
+                    </figcaption>
+                  </figure>
+                {{ end }}
+              <div class="media-content card-content">
+                <div class="content">
+                  <span class="is-size-7 is-normal">{{ .Date.Format "January 2, 2006" }}</span>
+                  <p class="title is-size-3-fullhd is-size-4-desktop is-size-5-tablet">{{ .Params.title }}</p>
+                  <span class="subtitle is-size-5-fullhd is-size-6-desktop post-description">
                   {{ .Params.description }}
-                {{ .Params.description }}
+                      {{ .Params.description }}
               </span>
-          </div>
-          <p class="subtitle tags is-fixed-bottom">
-              {{ range .Params.buzzwords }}
-                <span class="tag">{{.}}</span>
-              {{ end }}
-          </p>
-        </div>
-      </li>
-    </a>
-  {{- end }}
-  </ul>
-</section>
+                </div>
+                <p class="subtitle tags is-fixed-bottom">
+                    {{ range .Params.buzzwords }}
+                      <span class="tag">{{.}}</span>
+                    {{ end }}
+                </p>
+              </div>
+            </li>
+          </a>
+        {{- end }}
+    </ul>
+  </section>
+{{ end }}

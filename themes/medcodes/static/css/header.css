@@ -1,14 +1,5 @@
 html {
   background-color: #e3e3e3;
-  height: 100%;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-body {
-  height: 100%;
-  margin: 0 !important;
-  padding: 0 !important;
 }
 
 .title, .subtitle {
