@@ -1,6 +1,6 @@
 [context.production.environment]
-  HUGO_VERSION = "0.66"
-  HUGO_BASEURL = "https://med.codes/"
+  HUGO_VERSION = "0.66.0"
+  HUGO_BASEURL = "/"
 
 [context.deploy-preview.environment]
-  HUGO_VERSION = "0.66"
+  HUGO_VERSION = "0.66.0"

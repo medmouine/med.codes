@@ -20,7 +20,7 @@ params:
       name : "med.mouine"
       realName: "Med Mouine"
       description : "i like car seat headrest and writing code not for a living"
-      image : "/icons/app-icons/icon.png"
+      image : "/icons/gen-icons/icon-512x512.png"
       icon : "/icons/gen-icons/icon-96x96.png"
 
   social:
