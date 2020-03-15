@@ -1,0 +1,70 @@
+:root {
+  --border: black;
+  --accent: white;
+}
+
+.m-hero {
+  margin-bottom: 30px;
+}
+
+h2 .subtitle {
+  font-family: 'Source Code Pro', monospace;
+  margin-top: 20px !important;
+}
+
+.hero .title {
+  text-align: left;
+}
+
+.hero-image-container {
+  max-width: 100%;
+}
+
+.social-icon {
+  width: 70px;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.subtitle {
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 959px) {
+  .hero .title {
+    text-align: center;
+  }
+
+  .hero-summary {
+    text-align: center;
+  }
+
+  .social-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media only screen and (max-width: 959px) {
+  .hero .title {
+    text-align: center;
+  }
+
+  .hero-summary {
+    text-align: center;
+  }
+
+  .social-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .hero-body {
+    padding-top: 1rem !important;
+  }
+
+  .m-hero {
+    margin-bottom: 0 !important;
+  }
+}

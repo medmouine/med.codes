@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+{{- partial "head.html" . -}}
+<body>
+{{- partial "header.html" . -}}
+{{- partial "navbar.html" . -}}
+{{- $social := .Site.Params.social -}}
+{{- $homepage   := .Site.Params.homepage -}}
+{{- $hero   := $homepage.hero -}}
+{{- $icon      := $hero.icon -}}
+{{- $icn        := resources.Get $icon -}}
+<div id="content" class="container single">
+  <h1 class="title">{{ .Title }}</h1>
+  <div class="is-hidden-tablet top-socials">
+      {{ partial "socials.html" . }}
+  </div>
+  <div class="media">
+    <figure class="media-left image is-64x64">
+      <img class="is-rounded" src="{{ $icn.Permalink | relURL}}">
+    </figure>
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong>{{ $hero.realName }}</strong> <a class="is-link no-highlight"
+                                                   href="{{ $social.twitter.link }}"><small>@{{ $social.twitter.username }}</small></a>
+          <br/>
+          <span class="is-size-7">{{ .Date.Format "January 2, 2006" }}</span>
+            {{ if isset .Params "read_time" }}
+              <span class="is-size-7">| {{.Params.read_time}} read</span>
+            {{ end }}
+          <br/>
+          dsdsadas
+          dsdsadas
+          dsdsadas
+          dsdsadas
+          dsdsadas
+          dsdsadas
+        </p>
+      </div>
+    </div>
+    <div class="media-right is-hidden-mobile">
+      {{ partial "socials.html" . }}
+    </div>
+  </div>
+    {{ if isset .Params "thumbnail" }}
+      <figure class="image">
+        <img{{ with .Params.thumbnail }} src="{{ . }}"{{ end }} alt="{{ . }}">
+      </figure>
+    {{ end }}
+  <section>
+    {{ .Content }}
+  </section>
+</div>
+{{- partial "footer.html" . -}}
+</body>
+</html>

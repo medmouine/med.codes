@@ -1,0 +1,17 @@
+<body>
+<div class="m-menu">
+  <p class="is-vcentered ">
+      {{ $pages := (where .Site.RegularPages "Type" "page") }}
+      {{ range $index, $page := $pages }}
+          {{- if ne $index 0 -}}
+            <span class="navbar-item">|</span>
+          {{ end }}
+          <a class="navbar-item" href="{{ .Permalink }}">{{ .Name }}</a>
+      {{ end }}
+      {{ range $index, $social := .Site.Params.social }}
+        <span class="navbar-item">|</span>
+        <a class="navbar-item" href="{{ .link }}">{{ .title }}</a>
+      {{ end }}
+  </p>
+</div>
+</body>

@@ -1,0 +1,21 @@
+.single {
+  max-width: 800px;
+  margin-top: 2em;
+  padding: 0 1rem 0 1rem;
+}
+
+.no-highlight {
+  color: #0a0a0a;
+}
+
+.single .media-content {
+  margin-bottom: 80px;
+}
+
+.single .title {
+  font-family: unset;
+}
+
+.single .top-socials {
+  margin: 10px 0 25px 0;
+}

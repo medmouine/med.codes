@@ -1,0 +1,33 @@
+{{- $social := .Site.Params.social -}}
+<div class="icon is-large">
+    {{- $email         := $social.email}}
+    {{- $emailIconPath := $email.icon -}}
+    {{- $emailIcon    := resources.Get $emailIconPath -}}
+    <a href="mailto:{{ $email.link }}">
+        <img class="social-icon image" src="{{- $emailIcon.Permalink | relURL -}}"/>
+    </a>
+</div>
+<div class="icon is-large">
+    {{- $linkedin         := $social.linkedin}}
+    {{- $linkedinIconPath := $linkedin.icon -}}
+    {{- $linkedinIcon    := resources.Get $linkedinIconPath -}}
+    <a href="{{ $linkedin.link }}">
+        <img class="social-icon image" src="{{- $linkedinIcon.Permalink | relURL -}}"/>
+    </a>
+</div>
+<div class="icon is-large">
+    {{- $github         := $social.github}}
+    {{- $githubIconPath := $github.icon -}}
+    {{- $githubIcon    := resources.Get $githubIconPath -}}
+    <a href="{{ $github.link }}">
+        <img class="image social-icon" src="{{- $githubIcon.Permalink | relURL -}}"/>
+    </a>
+</div>
+<div class="icon is-large">
+    {{- $twitter         := $social.twitter}}
+    {{- $twitterIconPath := $twitter.icon -}}
+    {{- $twitterIcon    := resources.Get $twitterIconPath -}}
+    <a href="{{ $twitter.link }}">
+        <img class="social-icon image" src="{{- $twitterIcon.Permalink | relURL -}}"/>
+    </a>
+</div>

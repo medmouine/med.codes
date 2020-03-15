@@ -1,0 +1,64 @@
+{{- $homepage   := .Site.Params.homepage -}}
+<section class="hero m-hero">
+    {{- $hero   := $homepage.hero -}}
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="hero-image-container column is-8-mobile is-offset-2-mobile is-3 is-offset-2">
+          <figure class="image">
+              {{- $image      := $hero.image -}}
+              {{- $img        := resources.Get $image -}}
+            <img class="is-rounded" src="{{- $img.Permalink | relURL -}}">
+            <div class="circles is-overlay">
+              <div class="circle-multiple">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+              </div>
+            </div>
+          </figure>
+        </div>
+        <div class="column is-4 is-8-mobile is-offset-2-mobile hero-summary">
+          <h1 class="title is-size-4">{{ $hero.name }}</h1>
+          <h2 class="subtitle is-size-4 is-size-6-mobile">{{ $hero.description }}</h2>
+
+          <div class="columns is-multiline is-centered is-mobile socials">
+              {{- $social   := .Site.Params.social -}}
+            <div class="column is-6-mobile">
+                {{- $email         := $social.email}}
+                {{- $emailIconPath := $email.icon -}}
+                {{- $emailIcon    := resources.Get $emailIconPath -}}
+              <a href="mailto:{{ $email.link }}">
+                <img class="social-icon image" src="{{- $emailIcon.Permalink | relURL -}}"/>
+              </a>
+            </div>
+            <div class="column is-6-mobile">
+                {{- $linkedin         := $social.linkedin}}
+                {{- $linkedinIconPath := $linkedin.icon -}}
+                {{- $linkedinIcon    := resources.Get $linkedinIconPath -}}
+              <a href="{{ $linkedin.link }}">
+                <img class="social-icon image" src="{{- $linkedinIcon.Permalink | relURL -}}"/>
+              </a>
+            </div>
+            <div class="column is-6-mobile">
+                {{- $github         := $social.github}}
+                {{- $githubIconPath := $github.icon -}}
+                {{- $githubIcon    := resources.Get $githubIconPath -}}
+              <a href="{{ $github.link }}">
+                <img class="image social-icon" src="{{- $githubIcon.Permalink | relURL -}}"/>
+              </a>
+            </div>
+            <div class="column is-6-mobile">
+                {{- $twitter         := $social.twitter}}
+                {{- $twitterIconPath := $twitter.icon -}}
+                {{- $twitterIcon    := resources.Get $twitterIconPath -}}
+              <a href="{{ $twitter.link }}">
+                <img class="social-icon image" src="{{- $twitterIcon.Permalink | relURL -}}"/>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

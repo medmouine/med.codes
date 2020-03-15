@@ -1,0 +1,14 @@
+.m-menu {
+  text-align: center;
+}
+
+.navbar-item {
+  display: inline-block !important;
+  font-size: 1.2rem;
+  color: #723562 !important;
+  font-family: "Source Code Pro", monospace;
+}
+
+a.navbar-item:hover {
+  color: black !important;
+}

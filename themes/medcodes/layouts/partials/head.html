@@ -1,0 +1,20 @@
+<head>
+    <title> {{.Title}} </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ .Description }}">
+    <base href="{{ .Site.BaseURL }}">
+    <link type="text/css" rel="stylesheet" href="{{ "css/hero.css" | absURL}}">
+    <link type="text/css" rel="stylesheet" href="{{ "css/bulma/bulma.min.css" | absURL}}">
+    <link type="text/css" rel="stylesheet" href="{{ "css/header.css" | absURL}}">
+    <link type="text/css" rel="stylesheet" href="{{ "css/navbar.css" | absURL}}">
+    <link type="text/css" rel="stylesheet" href="{{ "css/posts.css" | absURL}}">
+    <link type="text/css" rel="stylesheet" href="{{ "css/content.css" | absURL}}">
+    <link type="text/css" rel="stylesheet" href="{{ "css/poole.css" | absURL}}">
+    <link type="text/css" rel="stylesheet" href="{{ "css/syntax.css" | absURL}}">
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    {{ $styles := resources.Get "sass/core.scss" | toCSS | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+</head>

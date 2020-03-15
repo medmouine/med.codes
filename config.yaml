@@ -1,0 +1,63 @@
+baseURL : ""
+languageCode : "en-us"
+title : "medcodes"
+enableEmoji : true
+theme : "medcodes"
+
+params:
+  loading:
+    icon : "/icons/loading/loading.png"
+
+  pagNotFound:
+    icon : "/icons/not_found/404.svg"
+    title : "404 Page Not Found :("
+    subtitle : "This is not the page you were looking for..."
+
+  homepage:
+    title : "Medcodes"
+    subtitle : "Med Mouine personal website and blog"
+    hero:
+      name : "med.mouine"
+      realName: "Med Mouine"
+      description : "i like car seat headrest and writing code not for a living"
+      image : "/icons/app-icons/icon.png"
+      icon : "/icons/gen-icons/icon-96x96.png"
+
+  social:
+    email:
+        icon : "/icons/contact/email.svg"
+        link : "mailto:me@med.codes"
+        title : "email"
+    linkedin:
+        icon : "/icons/contact/linkedin.svg"
+        link : "https://www.linkedin.com/in/medmouine/"
+        title : "linkedin"
+    github:
+        icon : "/icons/contact/github.svg"
+        link : "https://github.com/medmouine"
+        title : "github"
+    twitter:
+        icon : "/icons/contact/twitter.svg"
+        link : "https://twitter.com/yoyoman42_"
+        title : "twitter"
+        username: "yoyoman42_"
+  copyright : "Mohamed Mouine - 2020"
+
+markup:
+  goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
+    parser:
+      attribute: true
+      autoHeadingID: true
+      autoHeadingIDType: github
+    renderer:
+      hardWraps: false
+      unsafe: false
+      xHTML: false
