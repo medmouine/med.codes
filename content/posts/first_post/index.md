@@ -10,6 +10,7 @@ buzzwords:
 - dsadas
 thumbnail: "images/thumbnails/first_post.jpg"
 read_time: 5min
+subtitle: "Ah yes this is good i like it"
 ---
 
 

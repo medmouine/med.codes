@@ -39,6 +39,11 @@
       {{ partial "socials.html" . }}
     </div>
   </div>
+    {{ if isset .Params "subtitle"}}
+      <div class="subtitle">
+        {{ .Params.subtitle }}
+      </div>
+    {{ end }}
     {{ if isset .Params "thumbnail" }}
       <figure class="image">
         <img{{ with .Params.thumbnail }} src="{{ . }}"{{ end }} alt="{{ . }}">
