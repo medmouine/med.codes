@@ -1,5 +1,5 @@
 {{- $social := .Site.Params.social -}}
-<div class="icon is-large">
+<div class="icon is-medium">
     {{- $email         := $social.email}}
     {{- $emailIconPath := $email.icon -}}
     {{- $emailIcon    := resources.Get $emailIconPath -}}
@@ -7,7 +7,7 @@
         <img class="social-icon image" src="{{- $emailIcon.Permalink | relURL -}}"/>
     </a>
 </div>
-<div class="icon is-large">
+<div class="icon is-medium">
     {{- $linkedin         := $social.linkedin}}
     {{- $linkedinIconPath := $linkedin.icon -}}
     {{- $linkedinIcon    := resources.Get $linkedinIconPath -}}
@@ -15,7 +15,7 @@
         <img class="social-icon image" src="{{- $linkedinIcon.Permalink | relURL -}}"/>
     </a>
 </div>
-<div class="icon is-large">
+<div class="icon is-medium">
     {{- $github         := $social.github}}
     {{- $githubIconPath := $github.icon -}}
     {{- $githubIcon    := resources.Get $githubIconPath -}}
@@ -23,7 +23,7 @@
         <img class="image social-icon" src="{{- $githubIcon.Permalink | relURL -}}"/>
     </a>
 </div>
-<div class="icon is-large">
+<div class="icon is-medium">
     {{- $twitter         := $social.twitter}}
     {{- $twitterIconPath := $twitter.icon -}}
     {{- $twitterIcon    := resources.Get $twitterIconPath -}}

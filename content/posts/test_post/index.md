@@ -3,7 +3,7 @@ author: "Michael Henderson"
 date: 2014-09-28
 title: Creating a New Theme
 weight: 10
-draft: false
+draft: true
 ---
 
 

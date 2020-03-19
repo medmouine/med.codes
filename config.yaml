@@ -23,6 +23,7 @@ params:
       description : "i like car seat headrest and writing code not for a living"
       image : "/icons/gen-icons/icon-512x512.png"
       icon : "/icons/gen-icons/icon-96x96.png"
+      media_description: "Med Mouine is an award winning software engineer and freelancer with high interest in devops methodology and automation tools. Always looking to share knowledge, drinks or both!"
 
   social:
     email:
@@ -60,5 +61,5 @@ markup:
       autoHeadingIDType: github
     renderer:
       hardWraps: false
-      unsafe: false
+      unsafe: true
       xHTML: false
