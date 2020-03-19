@@ -24,7 +24,9 @@
           <strong>{{ $hero.realName }}</strong> <a class="is-link no-highlight"
                                                    href="{{ $social.twitter.link }}"><small>@{{ $social.twitter.username }}</small></a>
           <br/>
-          <span class="is-size-7">{{ .Date.Format "January 2, 2006" }}</span>
+            {{ if isset .Params "date" }}
+              <span class="is-size-7">{{ .Date.Format "January 2, 2006" }}</span>
+            {{ end }}
             {{ if isset .Params "read_time" }}
               <span class="is-size-7">| {{.Params.read_time}} read</span>
             {{ end }}
